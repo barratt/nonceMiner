@@ -1,0 +1,9 @@
+
+services:
+  miner:
+    build: .
+    # volumes:
+      # - .:/usr/src/app
+    environment:
+      DUCO_USERNAME: LeCoffee
+      DUCO_PROCESSES: 8

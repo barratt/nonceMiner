@@ -5,6 +5,7 @@ import datetime
 import threading
 import multiprocessing as mp
 from ctypes import c_char
+import os
 
 import nonceMiner
 
@@ -93,8 +94,8 @@ if __name__ == '__main__':
     mp.freeze_support() # Required for conversion to exe
 
     print('Initializing nonceMiner mp_miner...')
-    USERNAME = input('Enter username: ')
-    N_PROCESSES = int(input('Enter # of processes: '))
+    USERNAME = os.environ['DUCO_USERNAME']
+    N_PROCESSES = int(os.environ['DUCO_PROCESSES'])
     time.sleep(0.1)
     print('Starting processes...')
 

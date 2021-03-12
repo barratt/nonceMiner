@@ -3,9 +3,10 @@
 # Edited by Kenny Peng to call nonceMiner extension
 import socket, urllib.request # Only python3 included libraries
 import nonceMiner
+import os
 soc = socket.socket()
 
-username = 'travelmode'
+username = os.environ['DUCO_USERNAME']
 
 # This sections grabs pool adress and port from Duino-Coin GitHub file
 serverip = 'https://raw.githubusercontent.com/revoxhere/duino-coin/gh-pages/serverip.txt' # Serverip file
